@@ -33,6 +33,7 @@ public class Launch implements Framework_constants{
         Thread.sleep(2000);
 
     }
+    //hey 
     @AfterMethod
     public void screenshot(ITestResult res) throws Exception
     {
@@ -41,6 +42,8 @@ public class Launch implements Framework_constants{
             Screenshot.capture(driver);
         }
     }
+
+    //
     @AfterClass
 
     public void close() throws Exception {
@@ -48,3 +51,4 @@ public class Launch implements Framework_constants{
         driver.close();
     }
 }
+// Main comment
