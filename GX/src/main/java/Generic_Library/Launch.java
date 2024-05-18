@@ -9,6 +9,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class Launch implements Framework_constants{
@@ -18,7 +19,7 @@ public class Launch implements Framework_constants{
     public void open() throws Exception {
         driver=new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(url);
 
            //Signin
