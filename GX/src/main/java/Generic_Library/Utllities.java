@@ -85,8 +85,18 @@ public class Utllities {
     act.moveToElement(element).click().build().perform();
 
    }
-
-
+   
+   public void scrolling(WebElement element, long waitTimeSecond)
+   {
+    
+    JavascriptExecutor js= (JavascriptExecutor)driver;
+    js.executeScript("arguments[0].scrollIntoView();", element);
+    WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(waitTimeSecond));
+    WebElement elements= null;
+    elements=wait.until(ExpectedConditions.elementToBeClickable(elements));
+    
+   }
+   
    
     
 }
